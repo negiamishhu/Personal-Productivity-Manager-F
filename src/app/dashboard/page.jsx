@@ -99,8 +99,7 @@ export default function Dashboard() {
 
   const { summary, expensesByCategory, tasksByStatus, recentActivity } = dashboardData;
   
-  // Safe defaults to prevent undefined errors
-  const safeSummary = {
+   const safeSummary = {
     totalIncome: summary?.totalIncome || 0,
     totalExpense: summary?.totalExpense || 0,
     netBalance: summary?.netBalance || 0,
@@ -272,8 +271,7 @@ export default function Dashboard() {
 
         {/* Charts Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Expenses by Category Pie Chart */}
-          <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden">
+           <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden">
             <div className="bg-brown-m px-6 py-4">
               <h3 className="text-lg font-semibold text-white">Expenses by Category</h3>
             </div>
@@ -332,8 +330,7 @@ export default function Dashboard() {
         </div>
 
         {/* Recent Activity */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Recent Expenses */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> 
           <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden">
             <div className="bg-brown-m px-6 py-4">
               <div className="flex items-center justify-between">

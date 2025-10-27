@@ -122,8 +122,7 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-work-bg">
-      {/* Header */}
-      <div className="bg-brown-m shadow-lg">
+       <div className="bg-brown-m shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div>
@@ -141,8 +140,7 @@ export default function AdminPage() {
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="bg-white border-b">
+       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="-mb-px flex space-x-8">
             <button
@@ -180,11 +178,9 @@ export default function AdminPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Tab Content */}
-        {activeTab === 'overview' && (
+         {activeTab === 'overview' && (
           <>
-            {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <div className="bg-white overflow-hidden shadow-md rounded-xl border-l-4 border-blue-500 hover:shadow-lg transition-all hover:scale-105">
                 <div className="p-6">
                   <div className="flex items-center">
@@ -258,7 +254,7 @@ export default function AdminPage() {
               </div>
             </div>
 
-            {/* Users Table */}
+
         <div className="bg-white shadow-md rounded-xl overflow-hidden">
           <div className="bg-brown-m px-6 py-4">
             <h3 className="text-lg font-semibold text-white">All Users</h3>
@@ -347,7 +343,7 @@ export default function AdminPage() {
           </>
         )}
 
-        {/* All Expenses Tab */}
+
         {activeTab === 'expenses' && (
           <div className="bg-white shadow-md rounded-xl overflow-hidden">
             <div className="bg-brown-m px-6 py-4">
@@ -414,7 +410,7 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* All Tasks Tab */}
+
         {activeTab === 'tasks' && (
           <div className="bg-white shadow-md rounded-xl overflow-hidden">
             <div className="bg-brown-m px-6 py-4">

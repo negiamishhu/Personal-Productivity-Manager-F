@@ -12,7 +12,6 @@ export default function ExpenseDetail({ params }) {
   const [deleting, setDeleting] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   
-  // Unwrap the params Promise
   const resolvedParams = use(params);
   const expenseId = resolvedParams.id;
 
@@ -133,7 +132,7 @@ export default function ExpenseDetail({ params }) {
 
   return (
     <div className="min-h-screen bg-work-bg">
-      {/* Header */}
+      
       <div className="bg-brown-m shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
@@ -163,10 +162,9 @@ export default function ExpenseDetail({ params }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Content */}
+          
           <div className="lg:col-span-2">
-            <div className="bg-white shadow-md rounded-xl overflow-hidden">
-              {/* Header */}
+            <div className="bg-white shadow-md rounded-xl overflow-hidden"> 
               <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-semibold text-gray-900">{expense.title}</h2>
@@ -180,9 +178,8 @@ export default function ExpenseDetail({ params }) {
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="px-6 py-6">
-                {/* Amount */}
+
+              <div className="px-6 py-6"> 
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     <span className={expense.type === 'income' ? 'text-green-600' : 'text-red-600'}>
@@ -191,16 +188,14 @@ export default function ExpenseDetail({ params }) {
                   </div>
                   <p className="text-sm text-gray-500">Amount</p>
                 </div>
-
-                {/* Description */}
+ 
                 {expense.description && (
                   <div className="mb-6">
                     <h3 className="text-sm font-medium text-gray-700 mb-2">Description</h3>
                     <p className="text-gray-900 whitespace-pre-wrap">{expense.description}</p>
                   </div>
                 )}
-
-                {/* Details Grid */}
+ 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-sm font-medium text-gray-700 mb-2">Category</h3>
@@ -224,8 +219,7 @@ export default function ExpenseDetail({ params }) {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Quick Actions */}
+          <div className="space-y-6"> 
             <div className="bg-white shadow-md rounded-xl p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-3">
@@ -245,8 +239,7 @@ export default function ExpenseDetail({ params }) {
                 </button>
               </div>
             </div>
-
-            {/* Expense Info */}
+ 
             <div className="bg-white shadow-md rounded-xl p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Expense Information</h3>
               <dl className="space-y-3">
@@ -271,8 +264,7 @@ export default function ExpenseDetail({ params }) {
           </div>
         </div>
       </div>
-
-      {/* Delete Confirmation Modal */}
+ 
       {showDeleteModal && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
