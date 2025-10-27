@@ -237,13 +237,7 @@ NEXT_PUBLIC_API_URL=https://your-backend-api.com
 npm run build
 vercel
 ```
-
-### Other Platforms
-
-- **Netlify** - Free hosting with CI/CD
-- **Railway** - Deploy from GitHub
-- **Render** - Full-stack deployment
-- **Cloudflare Pages** - Edge deployment
+ 
 
 ## Build Configuration
 
@@ -272,31 +266,4 @@ npm run lint         # Run ESLint
 - **Lucide React:** Icon library
 - **Recharts:** Chart library
 - **React Hooks:** State management
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-MIT
-
-## Author
-
-FlowTrack Development Team
-
-## Screenshots
-
-The application features:
-- Beautiful, modern UI
-- Responsive design
-- Real-time data updates
-- Interactive charts
-- Intuitive navigation
-
-## Support
-
-For issues or questions, please open an issue on the repository.
+ 
