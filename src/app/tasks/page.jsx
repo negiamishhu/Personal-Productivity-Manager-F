@@ -50,13 +50,11 @@ export default function TasksList() {
       const token = localStorage.getItem('accessToken');
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
-      // Choose endpoint based on active tab
-      let url;
+       let url;
       if (activeTab === 'your-tasks') {
         url = `${apiUrl}/api/tasks`;
       } else {
-        // For "User Tasks" tab, add parameter to show only regular users
-        queryParams.append('regularUsersOnly', 'true');
+         queryParams.append('regularUsersOnly', 'true');
         url = `${apiUrl}/api/admin/tasks`;
       }
       
@@ -222,8 +220,7 @@ export default function TasksList() {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Error Display */}
-        {error && (
+         {error && (
           <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
             <div className="flex">
               <div className="flex-shrink-0">
@@ -248,12 +245,10 @@ export default function TasksList() {
           </div>
         )}
 
-        {/* Filters */}
-        {showFilters && (
+         {showFilters && (
           <div className="bg-white p-6 rounded-lg shadow-sm border mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Search */}
-              <div>
+               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
                 <input
                   type="text"
@@ -264,8 +259,7 @@ export default function TasksList() {
                 />
               </div>
 
-              {/* Status */}
-              <div>
+               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
                 <select
                   value={filters.status}
@@ -281,8 +275,7 @@ export default function TasksList() {
                 </select>
               </div>
 
-              {/* Priority */}
-              <div>
+               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
                 <select
                   value={filters.priority}
@@ -298,8 +291,7 @@ export default function TasksList() {
                 </select>
               </div>
 
-              {/* Due Date Range */}
-              <div>
+               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Start Due Date</label>
                 <input
                   type="date"
@@ -334,8 +326,7 @@ export default function TasksList() {
           </div>
         )}
 
-        {/* Tasks Table */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           {loading ? (
             <div className="flex items-center justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -468,8 +459,7 @@ export default function TasksList() {
                 </table>
               </div>
 
-              {/* Pagination */}
-              {pagination.totalPages > 1 && (
+               {pagination.totalPages > 1 && (
                 <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
                   <div className="flex-1 flex justify-between sm:hidden">
                     <button

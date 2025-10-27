@@ -82,17 +82,14 @@ function AddEditTaskContent() {
       ...prev,
       [name]: value
     }));
-    
-    // Clear error when user starts typing
+     
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
         [name]: ''
       }));
     }
-
-    // Check tasks for selected date when dueDate changes
-    if (name === 'dueDate' && value) {
+     if (name === 'dueDate' && value) {
       checkTasksForDate(value);
     }
   };
@@ -105,8 +102,7 @@ function AddEditTaskContent() {
       const token = localStorage.getItem('accessToken');
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
-      // Fetch tasks for the selected date
-      const response = await fetch(`${apiUrl}/api/tasks?startDue=${date}&endDue=${date}`, {
+       const response = await fetch(`${apiUrl}/api/tasks?startDue=${date}&endDue=${date}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -116,19 +112,16 @@ function AddEditTaskContent() {
         const data = await response.json();
         let tasks = data.tasks || [];
         
-        // If editing, exclude the current task from the count
-        if (isEdit && taskId) {
+         if (isEdit && taskId) {
           tasks = tasks.filter(t => t._id !== taskId);
         }
         
-        // Only show info if there are other tasks
-        if (tasks.length === 0) {
+         if (tasks.length === 0) {
           setDateTasksInfo(null);
           return;
         }
         
-        // Count tasks by status
-        const pending = tasks.filter(t => t.status === 'pending').length;
+         const pending = tasks.filter(t => t.status === 'pending').length;
         const inProgress = tasks.filter(t => t.status === 'in-progress').length;
         const completed = tasks.filter(t => t.status === 'completed').length;
         
@@ -222,8 +215,7 @@ function AddEditTaskContent() {
 
   return (
     <div className="min-h-screen bg-work-bg">
-      {/* Header */}
-      <div className="bg-brown-m shadow-lg">
+       <div className="bg-brown-m shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div>
@@ -246,8 +238,7 @@ function AddEditTaskContent() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Date Tasks Info Display */}
-        {dateTasksInfo && dateTasksInfo.total > 0 && (
+         {dateTasksInfo && dateTasksInfo.total > 0 && (
           <div className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-lg p-4 shadow-sm">
             <div className="flex items-start">
               <div className="flex-shrink-0">
@@ -286,8 +277,7 @@ function AddEditTaskContent() {
         )}
 
         <div className="bg-white shadow-md rounded-xl">
-          <form onSubmit={handleSubmit} className="p-8 space-y-6">
-            {/* Title */}
+          <form onSubmit={handleSubmit} className="p-8 space-y-6"> 
             <div>
               <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
                 Title <span className="text-red-500">*</span>
@@ -307,8 +297,7 @@ function AddEditTaskContent() {
                 <p className="mt-1 text-sm text-red-600">{errors.title}</p>
               )}
             </div>
-
-            {/* Description */}
+ 
             <div>
               <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
                 Description
@@ -324,8 +313,7 @@ function AddEditTaskContent() {
               />
             </div>
 
-            {/* Due Date and Status */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="dueDate" className="block text-sm font-medium text-gray-700 mb-1">
                   Due Date <span className="text-red-500">*</span>
@@ -366,8 +354,7 @@ function AddEditTaskContent() {
               </div>
             </div>
 
-            {/* Priority and Category */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-1">
                   Priority
@@ -411,15 +398,13 @@ function AddEditTaskContent() {
               </div>
             </div>
 
-            {/* Error Message */}
-            {errors.general && (
+             {errors.general && (
               <div className="rounded-md bg-red-50 p-4">
                 <p className="text-sm text-red-800">{errors.general}</p>
               </div>
             )}
 
-            {/* Submit Buttons */}
-            <div className="flex justify-end space-x-3 pt-6 border-t border-gray-200">
+             <div className="flex justify-end space-x-3 pt-6 border-t border-gray-200">
               <Link
                 href="/tasks"
                 className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-colors"

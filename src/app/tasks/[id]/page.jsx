@@ -12,8 +12,7 @@ export default function TaskDetail({ params }) {
   const [deleting, setDeleting] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   
-  // Unwrap the params Promise
-  const resolvedParams = use(params);
+   const resolvedParams = use(params);
   const taskId = resolvedParams.id;
 
   useEffect(() => {
@@ -148,8 +147,7 @@ export default function TaskDetail({ params }) {
 
   return (
     <div className="min-h-screen bg-work-bg">
-      {/* Header */}
-      <div className="bg-brown-m shadow-lg">
+       <div className="bg-brown-m shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div>
@@ -178,11 +176,9 @@ export default function TaskDetail({ params }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Content */}
-          <div className="lg:col-span-2">
+           <div className="lg:col-span-2">
             <div className="bg-white shadow-md rounded-xl overflow-hidden">
-              {/* Header */}
-              <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
+               <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-semibold text-gray-900">{task.title}</h2>
                   <div className="flex items-center space-x-2">
@@ -198,18 +194,15 @@ export default function TaskDetail({ params }) {
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="px-6 py-6">
-                {/* Description */}
-                {task.description && (
+               <div className="px-6 py-6">
+                 {task.description && (
                   <div className="mb-6">
                     <h3 className="text-sm font-medium text-gray-700 mb-2">Description</h3>
                     <p className="text-gray-900 whitespace-pre-wrap">{task.description}</p>
                   </div>
                 )}
 
-                {/* Details Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-sm font-medium text-gray-700 mb-2">Priority</h3>
                     <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getPriorityColor(task.priority)}`}>
@@ -235,10 +228,8 @@ export default function TaskDetail({ params }) {
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Quick Actions */}
-            <div className="bg-white shadow-md rounded-xl p-6">
+           <div className="space-y-6">
+             <div className="bg-white shadow-md rounded-xl p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-3">
                 <Link
@@ -258,8 +249,7 @@ export default function TaskDetail({ params }) {
               </div>
             </div>
 
-            {/* Task Info */}
-            <div className="bg-white shadow-md rounded-xl p-6">
+             <div className="bg-white shadow-md rounded-xl p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Task Information</h3>
               <dl className="space-y-3">
                 <div>
@@ -292,8 +282,7 @@ export default function TaskDetail({ params }) {
         </div>
       </div>
 
-      {/* Delete Confirmation Modal */}
-      {showDeleteModal && (
+       {showDeleteModal && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onClick={() => setShowDeleteModal(false)}></div>

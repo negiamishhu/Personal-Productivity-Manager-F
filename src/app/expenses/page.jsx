@@ -52,13 +52,11 @@ export default function ExpensesList() {
       const token = localStorage.getItem('accessToken');
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
-      // Choose endpoint based on active tab
-      let url;
+       let url;
       if (activeTab === 'your-expenses') {
         url = `${apiUrl}/api/expenses`;
       } else {
-        // For "User Expenses" tab, add parameter to show only regular users
-        queryParams.append('regularUsersOnly', 'true');
+         queryParams.append('regularUsersOnly', 'true');
         url = `${apiUrl}/api/admin/expenses`;
       }
       
@@ -98,7 +96,7 @@ export default function ExpensesList() {
     setFilters(prev => ({
       ...prev,
       [key]: value,
-      page: 1 // Reset to first page when filters change
+      page: 1 
     }));
   };
 

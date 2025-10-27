@@ -18,8 +18,7 @@ export default function Login() {
       [name]: value
     }));
     
-    // Real-time validation as user types
-    if (touched[name]) {
+     if (touched[name]) {
       validateField(name, value);
     }
   };
@@ -73,8 +72,7 @@ export default function Login() {
   const validateForm = () => {
     const newErrors = {};
     
-    // Email validation
-    const email = formData.email.trim();
+     const email = formData.email.trim();
     if (!email) {
       newErrors.email = 'Email address is required';
     } else if (email.length > 255) {
@@ -85,8 +83,7 @@ export default function Login() {
       newErrors.email = 'Email contains invalid characters';
     }
     
-    // Password validation
-    const password = formData.password;
+     const password = formData.password;
     if (!password) {
       newErrors.password = 'Password is required';
     } else if (password.length < 6) {
@@ -119,14 +116,13 @@ export default function Login() {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
-      // Sanitize inputs before sending
-      const sanitizedData = {
+       const sanitizedData = {
         email: formData.email.trim().toLowerCase(),
         password: formData.password
       };
       
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 30000);  
       
       const response = await fetch(`${apiUrl}/api/auth/login`, {
         method: 'POST',
@@ -143,16 +139,14 @@ export default function Login() {
       const data = await response.json();
       
       if (response.ok) {
-        // Validate response data before storing
-        if (!data.accessToken || typeof data.accessToken !== 'string') {
+         if (!data.accessToken || typeof data.accessToken !== 'string') {
           throw new Error('Invalid response from server');
         }
         
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('userEmail', sanitizedData.email);
         
-        // Redirect based on user role
-        if (sanitizedData.email === 'anegi@admin.com') {
+         if (sanitizedData.email === 'anegi@admin.com') {
           window.location.href = '/admin';
         } else {
           window.location.href = '/dashboard';
@@ -184,7 +178,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex" style={{ backgroundColor: '#FAF9F5' }}>
-      {/* Left Side - Branding */}
+      {/* Left Side   */}
       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#5D4037' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>

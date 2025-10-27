@@ -1,8 +1,7 @@
 export default function Home() {
   return (
     <div className="min-h-screen flex" style={{ backgroundColor: '#FAF9F5' }}>
-      {/* Left Side - Hero Section */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#5D4037' }}>
+       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#5D4037' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -54,8 +53,7 @@ export default function Home() {
       {/* Right Side - CTA Section */}
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-lg">
-          {/* Mobile Logo */}
-          <div className="lg:hidden text-center mb-12">
+           <div className="lg:hidden text-center mb-12">
             <h1 className="text-4xl font-semibold whitespace-nowrap  mb-4" style={{ color: '#5D4037' }}>
               Productivity Manager
             </h1>

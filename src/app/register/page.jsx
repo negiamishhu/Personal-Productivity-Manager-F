@@ -260,8 +260,7 @@ export default function Register() {
 
   return (
     <div className="min-h-screen flex" style={{ backgroundColor: '#FAF9F5' }}>
-      {/* Left Side - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#5D4037' }}>
+       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#5D4037' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -305,11 +304,9 @@ export default function Register() {
         </div>
       </div>
 
-      {/* Right Side - Registration Form */}
-      <div className="flex-1 flex items-center justify-center p-8">
+       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
-          {/* Logo for mobile */}
-          <div className="lg:hidden text-center mb-8">
+           <div className="lg:hidden text-center mb-8">
             <h1 className="text-3xl font-bold" style={{ color: '#5D4037' }}>
               Productivity Manager
             </h1>
@@ -326,8 +323,7 @@ export default function Register() {
             </div>
 
             <div className="space-y-5">
-              {/* Name Field */}
-              <div>
+               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name <span className="text-red-500">*</span>
                 </label>
@@ -354,8 +350,7 @@ export default function Register() {
                 )}
               </div>
 
-              {/* Email Field */}
-              <div>
+               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email Address <span className="text-red-500">*</span>
                 </label>
@@ -382,8 +377,7 @@ export default function Register() {
                 )}
               </div>
 
-              {/* Password Field */}
-              <div>
+               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                   Password <span className="text-red-500">*</span>
                 </label>
@@ -414,8 +408,7 @@ export default function Register() {
                   </button>
                 </div>
                 
-                {/* Password Strength Indicator */}
-                {formData.password && (
+                 {formData.password && (
                   <div className="mt-2">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -444,8 +437,7 @@ export default function Register() {
                 )}
               </div>
 
-              {/* Confirm Password Field */}
-              <div>
+               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
                   Confirm Password <span className="text-red-500">*</span>
                 </label>
@@ -482,8 +474,7 @@ export default function Register() {
                 )}
               </div>
 
-              {/* General Error */}
-              {errors.general && (
+               {errors.general && (
                 <div className="rounded-lg bg-red-50 border border-red-200 p-4">
                   <p className="text-sm text-red-800 flex items-center gap-2">
                     <span className="text-lg">⚠</span>
@@ -492,8 +483,7 @@ export default function Register() {
                 </div>
               )}
 
-              {/* Submit Button */}
-              <button
+               <button
                 type="button"
                 onClick={handleSubmit}
                 disabled={loading}

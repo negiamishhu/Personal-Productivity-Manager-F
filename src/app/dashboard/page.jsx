@@ -152,8 +152,7 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {/* Income Card */}
-          <div className="bg-white overflow-hidden shadow-md rounded-xl border-l-4 border-emerald-500 hover:shadow-lg transition-all hover:scale-105">
+           <div className="bg-white overflow-hidden shadow-md rounded-xl border-l-4 border-emerald-500 hover:shadow-lg transition-all hover:scale-105">
             <div className="p-6">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
