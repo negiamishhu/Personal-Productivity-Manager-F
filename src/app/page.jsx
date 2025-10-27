@@ -99,23 +99,7 @@ export default function Home() {
                 <span>✨</span>
               </a>
             </div>
-
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold" style={{ color: '#5D4037' }}>500+</div>
-                  <div className="text-xs text-gray-600 mt-1">Active Users</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold" style={{ color: '#5D4037' }}>10K+</div>
-                  <div className="text-xs text-gray-600 mt-1">Tasks Created</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold" style={{ color: '#5D4037' }}>99%</div>
-                  <div className="text-xs text-gray-600 mt-1">Satisfaction</div>
-                </div>
-              </div>
-            </div>
+ 
           </div>
 
            <div className="lg:hidden mt-8 space-y-4">
