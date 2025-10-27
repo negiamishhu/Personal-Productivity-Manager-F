@@ -487,26 +487,7 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* Additional Info */}
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <Info className="h-5 w-5 text-blue-400" />
-            </div>
-            <div className="ml-3">
-              <h3 className="text-sm font-medium text-blue-800">Admin Information</h3>
-              <div className="mt-2 text-sm text-blue-700">
-                <p>This panel provides an overview of all registered users and their activity on the platform.</p>
-                <ul className="mt-2 list-disc list-inside space-y-1">
-                  <li>Monitor user registration and activity levels</li>
-                  <li>Track total expenses and tasks across all users</li>
-                  <li>Identify admin users and regular users</li>
-                  <li>View member registration dates</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+ 
       </div>
     </div>
   );
