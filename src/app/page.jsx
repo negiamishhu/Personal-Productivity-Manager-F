@@ -9,8 +9,8 @@ export default function Home() {
         </div>
         <div className="relative z-10 flex flex-col justify-center items-center w-full p-12 text-white">
           <div className="max-w-md">
-            <h1 className="text-6xl font-bold mb-6 leading-tight">
-              Productivity<br/>Manager
+            <h1 className="text-5xl font-semibold mb-6  ">
+              Productivity Manager
           </h1>
             <p className="text-xl opacity-90 leading-relaxed mb-12">
               Your all-in-one solution for tracking expenses, managing tasks, and boosting productivity
@@ -56,7 +56,7 @@ export default function Home() {
         <div className="w-full max-w-lg">
           {/* Mobile Logo */}
           <div className="lg:hidden text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4" style={{ color: '#5D4037' }}>
+            <h1 className="text-4xl font-semibold whitespace-nowrap  mb-4" style={{ color: '#5D4037' }}>
               Productivity Manager
             </h1>
             <p className="text-gray-600 text-lg">
