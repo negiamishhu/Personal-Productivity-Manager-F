@@ -47,7 +47,7 @@ function AddEditTaskContent() {
     setLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
         const response = await fetch(`${apiUrl}/api/tasks/${taskId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -103,7 +103,7 @@ function AddEditTaskContent() {
     setCheckingDate(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
       // Fetch tasks for the selected date
       const response = await fetch(`${apiUrl}/api/tasks?startDue=${date}&endDue=${date}`, {
@@ -179,7 +179,7 @@ function AddEditTaskContent() {
     
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       const url = isEdit 
         ? `${apiUrl}/api/tasks/${taskId}`
         : `${apiUrl}/api/tasks`;

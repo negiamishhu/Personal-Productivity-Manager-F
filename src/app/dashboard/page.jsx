@@ -22,7 +22,7 @@ export default function Dashboard() {
       }
 
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
         const headers = { 'Authorization': `Bearer ${token}` };
         const [summaryRes, expensesByCategoryRes, tasksByStatusRes, recentActivityRes] = await Promise.all([
           fetch(`${apiUrl}/api/dashboard/summary`, { headers }),
@@ -124,7 +124,7 @@ export default function Dashboard() {
           <div className="flex justify-between items-center py-6">
             <div>
               <h1 className="text-3xl font-bold text-white">Dashboard</h1>
-              <p className="mt-1 text-sm text-amber-100">Welcome back! Here's your productivity overview.</p>
+              <p className="mt-1 text-sm text-amber-100">Welcome back! Here&apos;s your productivity overview.</p>
             </div>
             <div className="flex space-x-5">
               <Link

@@ -50,7 +50,7 @@ export default function ExpensesList() {
       });
 
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
       // Choose endpoint based on active tab
       let url;

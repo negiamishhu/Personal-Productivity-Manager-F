@@ -24,7 +24,7 @@ export default function TaskDetail({ params }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       const response = await fetch(`${apiUrl}/api/tasks/${taskId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -50,7 +50,7 @@ export default function TaskDetail({ params }) {
     setDeleting(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       const response = await fetch(`${apiUrl}/api/tasks/${taskId}`, {
         method: 'DELETE',
         headers: {

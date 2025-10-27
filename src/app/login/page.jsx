@@ -117,7 +117,7 @@ export default function Login() {
     setErrors({});
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
       // Sanitize inputs before sending
       const sanitizedData = {

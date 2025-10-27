@@ -23,7 +23,7 @@ export default function AdminPage() {
     setLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       
       if (activeTab === 'overview') {
         const [usersRes, summaryRes] = await Promise.all([

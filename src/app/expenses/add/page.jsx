@@ -40,7 +40,7 @@ function AddEditExpenseContent() {
     setBalanceLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       const response = await fetch(`${apiUrl}/api/dashboard/summary`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -63,7 +63,7 @@ function AddEditExpenseContent() {
     setLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
         const response = await fetch(`${apiUrl}/api/expenses/${expenseId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -155,7 +155,7 @@ function AddEditExpenseContent() {
     
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://personal-productivity-manager-b.onrender.com';
       const url = isEdit 
         ? `${apiUrl}/api/expenses/${expenseId}`
         : `${apiUrl}/api/expenses`;
